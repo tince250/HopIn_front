@@ -47,6 +47,14 @@ mat-form-field {
     margin-top: 10px;
 }
 
+.mat-checkbox {
+    margin-top: 8px;
+    color: #383838;
+    font-size: 0.8em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
+
 button{
     display: flex;
     height: 35px;
