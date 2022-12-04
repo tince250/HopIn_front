@@ -1,19 +1,18 @@
 <div id="login-container">
     <div id="form-container">
         <h3>Welcome back</h3>
-        <form>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
             <mat-form-field>
                 <mat-label>Email</mat-label>
                 <input matInput type="email" name="email" formControlName="email" />
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Password</mat-label>
-                <mat-icon id="eye-icon" matSuffix >visibility</mat-icon>
-                <input matInput type="password" name="password" formControlName="password" />
-            </mat-form-field>   
-            <mat-checkbox class="example-margin">Remember me</mat-checkbox>
+                <mat-icon id="eye-icon" matSuffix (click)="isVisible = !isVisible">{{isVisible ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <input matInput [type]="isVisible? 'password' : 'text'" name="password" formControlName="password" />
+            </mat-form-field>
         </form>
-        <button mat-raised-button>Log In</button>
+        <button mat-raised-button type="submit">Log In</button>
         <a href="#">Forgot password?</a>
     </div>
     <div id="img-container">
