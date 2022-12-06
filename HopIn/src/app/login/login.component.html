@@ -2,13 +2,13 @@
     <div id="form-container">
         <h3>Welcome back</h3>
         <form [formGroup]="loginForm" (ngSubmit)="login()">
-            <mat-form-field>
+            <mat-form-field >
                 <mat-label>Email</mat-label>
                 <input matInput type="email" name="email" formControlName="email" />
                 <mat-error *ngIf="loginForm.get('email')?.errors?.['required']">entering email is required</mat-error>
                 <mat-error *ngIf="loginForm.get('email')?.errors?.['email']">invalid email format</mat-error>
             </mat-form-field>
-            <mat-form-field>
+            <mat-form-field id="bb">
                 <mat-label>Password</mat-label>
                 <mat-icon id="eye-icon" matSuffix (click)="isVisible = !isVisible">{{isVisible ? 'visibility' : 'visibility_off'}}</mat-icon>
                 <input matInput [type]="isVisible? 'text' : 'password'" name="password" formControlName="password" />
@@ -17,7 +17,10 @@
             <mat-checkbox>Remember me</mat-checkbox>
         </form>
         <button mat-raised-button type="submit">Log In</button>
-        <a href="#">Forgot password?</a>
+        <a id="forgotten-password-ref" href="#">Forgot password?</a>
+        <p>
+            New and wanna hop in? <a id="register-ref" href="#">Register!</a>
+        </p>
     </div>
     <div id="img-container">
         <img src="../../assets/login.svg">
