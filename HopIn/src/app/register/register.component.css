@@ -1,0 +1,124 @@
+
+
+/* mat-form-field {
+    display: inline-block;
+} */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr;
+    width: 55%;
+    height: fit-content;
+    padding: 5px 15px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+/* ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0px;
+} */
+
+#name input {
+    height: 50px;
+}
+
+.reg-left {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-right: 2px solid #E6E6E6;
+    /* font-size: 13px; */
+}
+
+
+mat-form-field {
+    width: 80%;
+    height: 45px;
+    display: block;
+    margin: auto;
+    margin-top: 22px;
+    padding: 0;
+    font-size: 12px;
+}
+
+mat-error {
+    margin-top: -2px;
+    font-size: 11px;
+}
+
+.mat-form-field-wrapper {
+    height: 50px !important;
+}
+
+.mat-form-field-subscript-wrapper {
+    margin-top: 2px !important;
+}
+
+.title {
+    margin-top: 0px;
+    color: #383838;
+    font-weight: 700;
+}
+
+.conf-button {
+   background-color: #1E4A5A !important;
+   color: white;
+   font-weight: 400 !important;
+   font-size: 14px;
+   padding: 0px 30px;
+   margin-top: 20px;
+   border-radius: 5px;
+}
+
+.reg-illustartion {
+    text-align: center;
+
+}
+
+.reg-illustartion img{
+    display: inline-block;
+    margin: auto;
+}
+
+/* input.ng-invalid.ng-touched {
+    border-color: aqua;
+} */
+
+@media screen and (max-width: 1200px) {
+    .reg-illustartion img {
+        height: 350px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .reg-illustartion {
+        display: none;
+    }
+
+    .form-container {
+        display: block;
+        width: 85%;
+        margin-top: 40px;
+    }
+
+    .reg-left {
+        border-right: none;
+    }
+
+    mat-form-field {
+        width: 85%;
+    }
+    
+}
